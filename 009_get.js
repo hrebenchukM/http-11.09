@@ -15,7 +15,7 @@ const server = http.createServer(function(req, res) {
        if (req.url == '/') {
 
            // чтение файла index.html
-           var file_path = path.join(__dirname, '009_index.html'); 
+           var file_path = path.join(__dirname, '009_index.html');//конкатенация двух строк 
            fs.readFile(file_path, function (err, data) { 
 
                // обработка ошибок
@@ -27,7 +27,7 @@ const server = http.createServer(function(req, res) {
                } else {
                    res.writeHead(200, { 'Content-Type': 'text/html' }); 
                    // записать в овет содержимое читаемого файла 
-                   res.write(data.toString());
+                   res.write(data.toString());//отправляется клиенту
 
                }
 

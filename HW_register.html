@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+</head>
+    <style>
+     
+     body {
+            background-color: rgb(212, 211, 211);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      
+       
+        h1, label {
+            font-size: 25px; 
+            color: white; 
+        }
+        .form-group {
+           margin: 20px 20px;
+       }
+        .form-group label {
+            display: block;
+        }
+
+       
+    .styled-links {
+  display: flex;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  text-align: center;
+  cursor: pointer;
+ 
+   }
+
+
+
+
+.styled-links.active {
+  background-color: #fff;
+  border-color: #ccc;
+  border-bottom: none;
+}
+
+.styled-links a {
+   
+    font-family:cursive;
+    color: black;
+    margin: 5%;
+    text-decoration: none;
+    
+}
+.styled-links a:hover {
+    background-color: #e1e1e1;
+}
+     
+  
+    </style>
+</head>
+<body>
+
+
+
+
+
+<form>
+   
+
+    <span style="display: flex; color: white; text-align: center; border: 3px solid #ddd; margin: 10%;">
+        <div>
+        <h1>Регистрация для новичков</h1>
+
+       
+        <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" name="name">
+          
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Пол:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Женский</label>
+         
+        </div>
+
+        <div class="form-group">
+            <label for="age">Возраст</label>
+            <input type="number" name="age">
+          
+        </div>
+
+
+            <div class="form-group">
+                <label for="country">Страна:</label>
+                <select id="country" name="country">
+                    <option value="ukraine" style="color: black;">Украина</option>
+                    <option value="poland" style="color: black;">Польша</option>
+                    <option value="moldova" style="color: black;">Молдова</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" name="email">
+              
+            </div>
+
+        <div class="form-group">
+            <label>Пароль</label>
+            <input type="password" name="password">
+            
+        </div>
+
+        <div class="form-group">
+            <label>Подтверждение пароля</label>
+            <input type="password" name="passwordConfirm">
+            
+        </div>
+
+    
+    <div class="form-group">
+        <input type="submit" value="Регистрация">
+    </div>
+
+</div>
+</span>
+
+
+</form>
+<h3 class="styled-links">
+    <a href="/" >Back to Home</a>
+</h3>   
+</div>
+
+
+</body>
+</html>

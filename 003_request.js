@@ -1,7 +1,7 @@
 var http = require('http');
 var utils = require('util');
 
-http.createServer(function(req, res){
+http.createServer(function(req, res){//по факту декомпозиция реквеста
     
     var requestInfo = utils.format('HTTPVersion: %s \nMethod: %s \nStatus code: %s \nMessage: %s \nURL: %s',        
         // верисия http протокола
@@ -15,7 +15,7 @@ http.createServer(function(req, res){
         // запрашиваемый ресурс
         req.url);
         
-    console.log(requestInfo);
+    console.error(requestInfo);
 
     console.log();
     // headers - свойство содержит объект с заголовками
@@ -23,5 +23,5 @@ http.createServer(function(req, res){
         console.log(key, ":", req.headers[key]);
     }
     // отправляем ответ клиенту
-    res.end();    
+    res.end(requestInfo);    
 }).listen(8080, 'localhost');

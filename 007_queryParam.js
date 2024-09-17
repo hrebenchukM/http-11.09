@@ -14,8 +14,7 @@ server.on('request', function(req, res) {
 	var parsed = url.parse(req.url, true); 
 	console.log(parsed);
     
-	if (parsed.pathname == '/test' && parsed.query.message) {
-
+	if (parsed.pathname == '/test' && parsed.query.message) {//если http://localhost:8080/test?message=Hello%20world
 		res.statusCode = 200; // OK
 
 		res.end(parsed.query.message); 
